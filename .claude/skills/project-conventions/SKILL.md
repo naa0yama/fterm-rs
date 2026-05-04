@@ -1,15 +1,16 @@
 ---
 name: project-conventions
 description: >-
-  Project-specific conventions for the boilerplate-rust Rust CLI. Overrides
-  and extends the shared rust-project-conventions skill with project-specific
-  commands, OTel configuration, and project structure. Use when writing,
-  reviewing, or modifying .rs files, running builds/tests, or creating commits.
-  Complements rust-implementation with project-specific rules.
+  Project-specific conventions for the fterm Rust CLI (SSH/SCP connection
+  manager). Overrides and extends the shared rust-project-conventions skill
+  with project-specific commands, OTel configuration, and project structure.
+  Use when writing, reviewing, or modifying .rs files, running builds/tests,
+  or creating commits. Complements rust-implementation with project-specific
+  rules.
 license: AGPL-3.0
 ---
 
-# Project Conventions — boilerplate-rust (Override)
+# Project Conventions — fterm (Override)
 
 > **Base rules**: See `~/.claude/skills/rust-project-conventions/SKILL.md` for
 > shared conventions (error context, logging, imports, workflow, comments,

@@ -1,13 +1,10 @@
-# Boilerplate-Rust
+# fterm
 
-![coverage](https://raw.githubusercontent.com/naa0yama/boilerplate-rust/badges/coverage.svg)
-![test execution time](https://raw.githubusercontent.com/naa0yama/boilerplate-rust/badges/time.svg)
-
-Rust プロジェクトのための開発テンプレート
+SSH/SCP 接続管理ツール。ファジーファインダー選択・tmux 統合・SSH config バリデーションを Rust で実装。
 
 ## 概要
 
-このプロジェクトは、Rust 開発を始めるためのボイラープレートです。Dev Containers に対応しており、VS Code での開発環境が簡単に構築できます。
+`fterm` は fish shell の SSH ラッパー関数群を Rust バイナリとして再実装したプロジェクトです。Dev Containers に対応しており、VS Code での開発環境が簡単に構築できます。
 
 ## 必要要件
 
@@ -21,7 +18,7 @@ Rust プロジェクトのための開発テンプレート
 
 ```bash
 git clone <repository-url>
-cd boilerplate-rust
+cd fterm
 ```
 
 2. VS Codeでプロジェクトを開く:
@@ -87,24 +84,24 @@ traefik ルーティングを自動設定します。起動後に以下の形式
 http://p<port>.<branch>.<project>.localhost:8080
 ```
 
-例 (ポート `5080`、ブランチ `feature/add-auth`、プロジェクト `boilerplate-rust`):
+例 (ポート `5080`、ブランチ `feature/add-auth`、プロジェクト `fterm`):
 
 ```
-http://p5080.feature-add-auth.boilerplate-rust.localhost:8080
+http://p5080.feature-add-auth.fterm.localhost:8080
 ```
 
 ### 複数 worktree での利用
 
 ```bash
 # 1つ目の worktree
-cd /path/to/boilerplate-rust
+cd /path/to/fterm
 mise run dev:up
-# -> http://p5080.main.boilerplate-rust.localhost:8080
+# -> http://p5080.main.fterm.localhost:8080
 
 # 2つ目の worktree (別ブランチ)
-cd /path/to/boilerplate-rust-feat
+cd /path/to/fterm-feat
 mise run dev:up
-# -> http://p5080.feature-x.boilerplate-rust.localhost:8080
+# -> http://p5080.feature-x.fterm.localhost:8080
 ```
 
 ブランチ名は DNS ラベル形式 (小文字英数字とハイフン、63文字以内) に自動変換されます。
@@ -165,7 +162,7 @@ mise run pre-commit       # clean:sweep + fmt:check + clippy:strict + ast-grep +
 │   └── pre-push                # プッシュ前チェック
 ├── .github/                    # GitHub Actions & 設定
 │   ├── actions/                # カスタムアクション
-│   ├── graft/                  # graft マニフェスト (テンプレートリポジトリからのファイル同期設定)
+│   ├── graft/                  # graft パッチ (テンプレートリポジトリからの差分パッチ)
 │   ├── workflows/              # CI/CD ワークフロー
 │   ├── labeler.yml
 │   ├── project-config.json         # CI/リリース設定 (ビルドターゲット・タイムアウト・apt パッケージ等)
@@ -179,19 +176,10 @@ mise run pre-commit       # clean:sweep + fmt:check + clippy:strict + ast-grep +
 │   └── settings.json           # ワークスペース設定
 ├── ast-rules/                  # ast-grep プロジェクトルール
 ├── crates/                     # ワークスペースクレート
-│   └── brust/                  # CLI バイナリクレート
-│       ├── src/
-│       │   ├── main.rs         # アプリケーションのエントリーポイント
-│       │   ├── libs.rs         # モジュール定義
-│       │   ├── metrics.rs      # OTel メトリクス instruments
-│       │   └── libs/
-│       │       ├── count.rs    # イテレーションカウンターモジュール
-│       │       ├── hello.rs    # Hello モジュール
-│       │       └── http.rs     # HTTP クライアント (OTel メトリクス付き)
-│       ├── tests/
-│       │   └── integration_test.rs  # 統合テスト
-│       ├── build.rs            # ビルドスクリプト
-│       └── Cargo.toml          # クレート設定
+│   ├── fterm/                  # バイナリクレート (CLI エントリーポイント)
+│   ├── fterm-core/             # コアライブラリ (型・trait・純粋関数)
+│   ├── fterm-session/          # セッション管理 (tmux・ロギング)
+│   └── fterm-ssh-config/       # SSH config パース・バリデーション
 ├── docs/                       # ドキュメント
 ├── .editorconfig               # エディター設定
 ├── .gitignore                  # Git除外設定
