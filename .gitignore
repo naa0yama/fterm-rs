@@ -31,7 +31,7 @@ lcov.info
 time.svg
 
 # tmp
-tmp/
+tmp/*
 *tmp*.*
 
 # RustRover
@@ -50,8 +50,9 @@ src-tauri/gen/
 *.nsis
 
 # graft:keep-start
-# Project-specific dependencies are listed here.
+# Project-specific entries are listed here.
 
+!tmp/.ssh/
 # graft:keep-end
 
 # Under the unknown

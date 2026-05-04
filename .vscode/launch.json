@@ -8,19 +8,19 @@
 			"type": "lldb",
 			"request": "launch",
 			// graft:keep-start
-			"name": "Debug executable 'brust'",
+			"name": "Debug executable 'fterm'",
 			// graft:keep-end
 			"cargo": {
 				"args": [
 					"build",
 					// graft:keep-start
-					"--bin=brust",
-					"--package=brust"
+					"--bin=fterm",
+					"--package=fterm"
 					// graft:keep-end
 				],
 				"filter": {
 					// graft:keep-start
-					"name": "brust",
+					"name": "fterm",
 					// graft:keep-end
 					"kind": "bin"
 				}
@@ -32,20 +32,20 @@
 			"type": "lldb",
 			"request": "launch",
 			// graft:keep-start
-			"name": "Debug unit tests in executable 'brust'",
+			"name": "Debug unit tests in executable 'fterm'",
 			// graft:keep-end
 			"cargo": {
 				"args": [
 					"test",
 					"--no-run",
 					// graft:keep-start
-					"--bin=brust",
-					"--package=brust"
+					"--bin=fterm",
+					"--package=fterm"
 					// graft:keep-end
 				],
 				"filter": {
 					// graft:keep-start
-					"name": "brust",
+					"name": "fterm",
 					// graft:keep-end
 					"kind": "bin"
 				}
