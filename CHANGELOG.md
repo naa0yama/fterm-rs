@@ -1,9 +1,13 @@
 # Changelog
 
 ## [v0.1.10](https://github.com/naa0yama/fterm-rs/commits/v0.1.10) - 2026-05-04
+
 ### Features 🎉
+
 - refactor: migrate fterm Rust crates from tmp/fterm by @naa0yama in https://github.com/naa0yama/fterm-rs/pull/3
+
 ### Development Environment 🔧
+
 - Update dependency jdx/mise to v2026.4.24 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/1
 - Update taiki-e/install-action action to v2.75.23 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/5
 
