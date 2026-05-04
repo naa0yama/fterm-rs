@@ -6,7 +6,7 @@ OPENOBSERVE_VERSION = "v0.80.0"
 # graft:keep-start
 # Project-specific dependencies are listed here.
 
-RUST_LOG = "warn,brust=trace"
+RUST_LOG = "warn,fterm=trace"
 # graft:keep-end
 
 [tools]

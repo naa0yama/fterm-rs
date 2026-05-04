@@ -1,0 +1,37 @@
+# - -------------------------------------------------------------------------------------------------
+# - Package
+# -
+[package]
+name = "fterm-session"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+repository.workspace = true
+description = "SSH session management (tmux, logging, files) for fterm"
+
+# - -------------------------------------------------------------------------------------------------
+# - Dependencies
+# -
+[dependencies]
+anyhow.workspace = true
+chrono.workspace = true
+flate2.workspace = true
+fterm-core = { path = "../fterm-core" }
+strip-ansi-escapes.workspace = true
+tracing.workspace = true
+walkdir.workspace = true
+
+# - -------------------------------------------------------------------------------------------------
+# - Dev Dependencies
+# -
+[dev-dependencies]
+fterm-core = { path = "../fterm-core", features = ["testutil"] }
+serial_test.workspace = true
+tempfile.workspace = true
+
+# - -------------------------------------------------------------------------------------------------
+# - Lints
+# -
+[lints]
+workspace = true

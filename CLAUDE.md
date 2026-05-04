@@ -46,6 +46,8 @@ All tasks use `mise run <task>`:
 | Dev (stop)            | `mise run dev:down`           |
 | Dev (exec)            | `mise run dev:exec`           |
 | Dev (status)          | `mise run dev:status`         |
+| SSH test setup        | `mise run ssh:setup`          |
+| sshd (test)           | `mise run sshd`               |
 | Traefik setup         | `mise run traefik:setup`      |
 
 ## Commit Convention
