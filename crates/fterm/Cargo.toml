@@ -1,0 +1,106 @@
+# - -------------------------------------------------------------------------------------------------
+# - Package
+# -
+[package]
+name = "fterm"
+version.workspace = true
+categories = ["command-line-utilities"]
+edition.workspace = true
+keywords = ["cli", "ssh", "tmux", "tool"]
+license.workspace = true
+publish.workspace = true
+repository.workspace = true
+description = "SSH/SCP connection management tool with fuzzy finder, tmux integration, and config validation"
+
+[package.metadata.binstall]
+pkg-url = "{ repo }/releases/download/v{ version }/{ name }-v{ version }-{ target }.tar.gz"
+bin-dir = "{ bin }{ binary-ext }"
+pkg-fmt = "tgz"
+disabled-strategies = ["quick-install"]
+
+[package.metadata.binstall.overrides.x86_64-pc-windows-msvc]
+pkg-url = "{ repo }/releases/download/v{ version }/{ name }-v{ version }-{ target }.zip"
+pkg-fmt = "zip"
+
+# - -------------------------------------------------------------------------------------------------
+# - Features
+# -
+[features]
+default = []
+otel = [
+	"dep:gethostname",
+	"dep:opentelemetry",
+	"dep:opentelemetry_sdk",
+	"dep:opentelemetry-otlp",
+	"dep:opentelemetry-appender-tracing",
+	"dep:opentelemetry-semantic-conventions",
+	"dep:tracing-opentelemetry",
+]
+process-metrics = ["otel", "dep:sysinfo"]
+
+# - -------------------------------------------------------------------------------------------------
+# - Dependencies
+# -
+[dependencies]
+# Internal
+fterm-core = { path = "../fterm-core" }
+fterm-session = { path = "../fterm-session" }
+fterm-ssh-config = { path = "../fterm-ssh-config" }
+
+# Core
+anyhow.workspace = true
+clap.workspace = true
+clap_complete.workspace = true
+thiserror.workspace = true
+
+# Time
+chrono.workspace = true
+
+# File utilities
+flate2.workspace = true
+glob.workspace = true
+strip-ansi-escapes.workspace = true
+walkdir.workspace = true
+which.workspace = true
+
+# Logging
+tracing.workspace = true
+tracing-subscriber.workspace = true
+
+# OpenTelemetry (optional, behind `otel` feature)
+gethostname = { workspace = true, optional = true }
+opentelemetry = { workspace = true, optional = true }
+opentelemetry-appender-tracing = { workspace = true, optional = true }
+opentelemetry-otlp = { workspace = true, optional = true }
+opentelemetry-semantic-conventions = { workspace = true, optional = true }
+opentelemetry_sdk = { workspace = true, optional = true }
+tracing-opentelemetry = { workspace = true, optional = true }
+
+# System info (optional, behind `process-metrics` feature)
+sysinfo = { workspace = true, optional = true }
+
+# - -------------------------------------------------------------------------------------------------
+# - Platform-specific dependencies
+# -
+[target.'cfg(unix)'.dependencies]
+nix.workspace = true
+
+# - -------------------------------------------------------------------------------------------------
+# - Dev Dependencies
+# -
+[dev-dependencies]
+assert_cmd.workspace = true
+fterm-core = { path = "../fterm-core", features = ["testutil"] }
+fterm-session = { path = "../fterm-session" }
+fterm-ssh-config = { path = "../fterm-ssh-config" }
+opentelemetry_sdk = { workspace = true, features = ["testing"] }
+predicates.workspace = true
+serial_test.workspace = true
+tempfile.workspace = true
+tracing-mock.workspace = true
+
+# - -------------------------------------------------------------------------------------------------
+# - Lints
+# -
+[lints]
+workspace = true

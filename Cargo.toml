@@ -4,10 +4,13 @@
 [workspace]
 resolver = "3"
 # graft:keep-start
-# Project-specific dependencies are listed here.
+# Project-specific workspace members are listed here.
 
 members = [
-	"crates/brust",
+	"crates/fterm",
+	"crates/fterm-core",
+	"crates/fterm-session",
+	"crates/fterm-ssh-config",
 ]
 
 [workspace.package]
@@ -15,7 +18,7 @@ version = "0.1.10"
 edition = "2024"
 license = "AGPL-3.0-only"
 publish = false
-repository = "https://github.com/naa0yama/boilerplate-rust"
+repository = "https://github.com/naa0yama/fterm"
 # graft:keep-end
 
 # - -------------------------------------------------------------------------------------------------
@@ -27,15 +30,24 @@ repository = "https://github.com/naa0yama/boilerplate-rust"
 
 ## Core
 clap = { version = "4.5.45", default-features = false, features = ["std", "derive", "help", "usage", "error-context", "color", "suggestions"] }
+clap_complete = "4.5.45"
+thiserror = "2.0.18"
 
-## Data
-reqwest = { version = "0.13.1", default-features = false, features = ["blocking", "rustls-no-provider"] }
-rustls = { version = "0.23", default-features = false, features = ["ring", "std", "tls12"] }
-serde = { version = "1.0.219", features = ["derive"] }
-serde_json = "1.0.137"
+## Time
+chrono = { version = "0.4.44", default-features = false, features = ["clock"] }
 
-## Random
-rand = { version = "0.10", default-features = false, features = ["thread_rng"] }
+## File utilities
+flate2 = "1.1.9"
+glob = "0.3.3"
+strip-ansi-escapes = "0.2.1"
+walkdir = "2.5.0"
+which = "8.0.2"
+
+## Unix
+nix = { version = "0.31.2", default-features = false, features = ["fs"] }
+
+## Dev
+serial_test = "3"
 
 # graft:keep-end
 
@@ -169,6 +181,7 @@ cargo-common-metadata = "allow"
 warnings = "warn"
 missing_debug_implementations = "warn" #			Warning about unimplemented Debug trait
 missing_docs = "warn" #								Warning about insufficient documentation for pub items.
+unexpected_cfgs = { level = "warn", check-cfg = ['cfg(coverage_nightly)'] }
 
 # - -------------------------------------------------------------------------------------------------
 # - Profiles
