@@ -128,7 +128,7 @@ mod tests {
     fn test_provider() -> (SdkMeterProvider, InMemoryMetricExporter) {
         let exporter = InMemoryMetricExporter::default();
         let reader = PeriodicReader::builder(exporter.clone())
-            .with_interval(Duration::from_secs(3600))
+            .with_interval(Duration::from_hours(1))
             .build();
         let provider = SdkMeterProvider::builder().with_reader(reader).build();
         (provider, exporter)

@@ -27,15 +27,11 @@ pub fn parse(ssh_g_output: &str) -> Vec<String> {
         let key_lower = key.to_lowercase();
 
         match key_lower.as_str() {
-            "proxyjump" => {
-                if !value.eq_ignore_ascii_case("none") {
-                    details.push(format!("ProxyJump {value}"));
-                }
+            "proxyjump" if !value.eq_ignore_ascii_case("none") => {
+                details.push(format!("ProxyJump {value}"));
             }
-            "proxycommand" => {
-                if !value.eq_ignore_ascii_case("none") {
-                    details.push(format!("ProxyCommand {value}"));
-                }
+            "proxycommand" if !value.eq_ignore_ascii_case("none") => {
+                details.push(format!("ProxyCommand {value}"));
             }
             "identityfile" => {
                 details.push(format!("IdentityFile {value}"));
@@ -43,10 +39,8 @@ pub fn parse(ssh_g_output: &str) -> Vec<String> {
             "identitiesonly" => {
                 details.push(format!("IdentitiesOnly {value}"));
             }
-            "forwardagent" => {
-                if value.eq_ignore_ascii_case("yes") {
-                    details.push(format!("ForwardAgent {value}"));
-                }
+            "forwardagent" if value.eq_ignore_ascii_case("yes") => {
+                details.push(format!("ForwardAgent {value}"));
             }
             "localforward" => {
                 details.push(format!("LocalForward {value}"));
@@ -54,10 +48,8 @@ pub fn parse(ssh_g_output: &str) -> Vec<String> {
             "remoteforward" => {
                 details.push(format!("RemoteForward {value}"));
             }
-            "dynamicforward" => {
-                if !value.eq_ignore_ascii_case("none") {
-                    details.push(format!("DynamicForward {value}"));
-                }
+            "dynamicforward" if !value.eq_ignore_ascii_case("none") => {
+                details.push(format!("DynamicForward {value}"));
             }
             _ => {}
         }
