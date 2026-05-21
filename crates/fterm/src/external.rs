@@ -388,6 +388,7 @@ mod tests {
     }
 
     #[cfg_attr(miri, ignore)]
+    #[serial_test::serial]
     #[test]
     fn real_runner_ssh_agent_list_returns_result() {
         // Arrange
