@@ -42,16 +42,12 @@ pub fn extract_host(host: &str, config_files: &[PathBuf]) -> Result<String> {
 
 /// Find the config block for `host` within a single file's content.
 fn find_host_block(host: &str, content: &str) -> Option<String> {
-    let mut lines = content.lines();
+    let lines = content.lines();
     let mut capturing = false;
     let mut block = String::new();
     let mut count = 0;
 
-    loop {
-        let Some(line) = lines.next() else {
-            break;
-        };
-
+    for line in lines {
         let trimmed = line.trim();
 
         if capturing {

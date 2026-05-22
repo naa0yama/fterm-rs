@@ -41,8 +41,7 @@ pub type OtelProviders = ();
 pub fn init_otel() -> OtelProviders {
     let has_endpoint = std::env::var("OTEL_EXPORTER_OTLP_ENDPOINT")
         .ok()
-        .filter(|ep| !ep.is_empty())
-        .is_some();
+        .is_some_and(|ep| !ep.is_empty());
 
     if !has_endpoint {
         return (None, None, None);

@@ -1,0 +1,9 @@
+# gitleaks:ignore entries for false positives
+# Format: <commit>:<file>:<rule-id>:<line>
+#
+# a0b7d3e6 chore: ast-rules — documentation bad-example in _rules.md
+# The key "sk-1234..." is a fake placeholder illustrating the no-hardcoded-credentials rule.
+a0b7d3e6fbf03977055f6c660e3a62a279d076b1:ast-rules/_rules.md:generic-api-key:463
+# 61e8373a refactor: migrate fterm Rust crates — SSH test fixture key (not a real key)
+# tmp/.ssh/ is git-tracked via !tmp/.ssh/ negation in .gitignore for SSH integration tests.
+61e8373a5e57ef7d63f975b75af8b4d85210571e:tmp/.ssh/conf.d/keys/private/id_ed25519.pem:private-key:1

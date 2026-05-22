@@ -1,5 +1,6 @@
 //! Log file utilities: listing, compression, and reading.
 
+use std::cmp::Reverse;
 use std::collections::HashSet;
 use std::fs::{self, File};
 use std::io::{self, BufRead, BufReader};
@@ -37,7 +38,7 @@ pub fn list_logs(dir: &Path) -> Vec<PathBuf> {
         .collect();
 
     // Sort by mtime descending (newest first)
-    entries.sort_by(|a, b| b.1.cmp(&a.1));
+    entries.sort_by_key(|b| Reverse(b.1));
 
     entries.into_iter().map(|(path, _)| path).collect()
 }
