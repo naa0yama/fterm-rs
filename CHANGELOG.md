@@ -1,13 +1,21 @@
 # Changelog
 
 ## [v0.1.11](https://github.com/naa0yama/fterm-rs/compare/v0.1.10...v0.1.11) - 2026-06-03
+
 ### Features 🎉
+
 - update(deps): bump graft from 0.5.4 to 0.5.5 by @naa0yama in https://github.com/naa0yama/fterm-rs/pull/22
+
 ### Documentation 🗒️
+
 - chore: reorganize mise tasks with nextest, quiet mode, and section grouping by @naa0yama in https://github.com/naa0yama/fterm-rs/pull/34
+
 ### Dependency Updates 📦
+
 - Lock file maintenance by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/25
+
 ### Development Environment 🔧
+
 - Update taiki-e/install-action action to v2.75.24 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/8
 - Update dependency jdx/mise to v2026.4.25 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/7
 - Update dependency openobserve/openobserve to v0.80.1 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/11
@@ -40,7 +48,9 @@
 - Update dependency aqua:EmbarkStudios/cargo-deny to v0.19.7 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/47
 - Update dependency github:naa0yama/graft to v0.5.7 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/48
 - Update dependency github:rust-secure-code/cargo-auditable to v0.7.5 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/49
+
 ### Other Changes
+
 - chore: backport boilerplate-rust template changes by @naa0yama in https://github.com/naa0yama/fterm-rs/pull/13
 - chore: fix gitignore patterns and mise o2 task env loading by @naa0yama in https://github.com/naa0yama/fterm-rs/pull/36
 
