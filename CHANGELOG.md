@@ -1,3 +1,163 @@
+<!-- Release notes generated using configuration in .github/release.yml at main -->
+
+## What's Changed
+
+### Features 🎉
+
+- update(deps): bump graft from 0.5.4 to 0.5.5 by @naa0yama in https://github.com/naa0yama/fterm-rs/pull/22
+
+### Documentation 🗒️
+
+- chore: reorganize mise tasks with nextest, quiet mode, and section grouping by @naa0yama in https://github.com/naa0yama/fterm-rs/pull/34
+- chore: backport release-manager, deps, CI, and tooling updates by @naa0yama in https://github.com/naa0yama/fterm-rs/pull/51
+
+### Dependency Updates 📦
+
+- Lock file maintenance by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/25
+- Update Rust crate nix to v0.31.3 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/53
+- Update group:clap to v4.6.5 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/50
+- Update Rust crate which to v8.0.3 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/66
+- Update Rust crate clap_complete to v4.6.7 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/87
+- Update Rust crate sysinfo to v0.39.5 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/89
+- Update Rust crate sysinfo to v0.39.6 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/109
+- Update Rust crate which to v8.0.5 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/121
+- Update Rust crate clap to v4.6.2 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/125
+- Update Rust crate anyhow to v1.0.104 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/130
+- Update Rust crate thiserror to v2.0.19 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/131
+- Update Rust crate clap to v4.6.3 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/132
+- Update Rust crate glob to v0.3.4 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/139
+- Update Rust crate clap to v4.6.4 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/140
+
+### Development Environment 🔧
+
+- Update taiki-e/install-action action to v2.75.24 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/8
+- Update dependency jdx/mise to v2026.4.25 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/7
+- Update dependency openobserve/openobserve to v0.80.1 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/11
+- Update taiki-e/install-action action to v2.75.25 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/12
+- Update taiki-e/install-action action to v2.75.26 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/14
+- Update dependency mozilla/sccache to v0.15.0 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/16
+- Update dependency jdx/mise to v2026.4.27 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/15
+- Update taiki-e/install-action action to v2.75.27 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/17
+- Update dependency jdx/mise to v2026.4.28 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/18
+- Update dependency ghalint to v1.5.6 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/19
+- Update github/codeql-action action to v4.35.3 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/20
+- Update taiki-e/install-action action to v2.75.28 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/21
+- Update taiki-e/install-action action to v2.75.29 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/23
+- Update taiki-e/install-action action to v2.75.30 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/24
+- Update dependency jdx/mise to v2026.5.0 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/26
+- Update taiki-e/install-action action to v2.76.0 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/28
+- Update taiki-e/install-action action to v2.77.0 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/29
+- Update dependency openobserve/openobserve to v0.80.2 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/30
+- Update taiki-e/install-action action to v2.77.1 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/31
+- Update dependency jdx/mise to v2026.5.1 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/32
+- Update actions/labeler action to v6.1.0 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/33
+- Update dependency openobserve/openobserve to v0.80.3 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/37
+- Update dependency jdx/mise to v2026.5.2 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/38
+- Update github/codeql-action action to v4.35.4 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/39
+- Update dependency jdx/mise to v2026.5.3 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/40
+- Update taiki-e/install-action action to v2.77.2 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/41
+- Update actions-rust-lang/setup-rust-toolchain action to v1.16.1 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/42
+- chore: backport deps, toolchain, and testdata-policy rules by @naa0yama in https://github.com/naa0yama/fterm-rs/pull/44
+- Update dependency aqua:ast-grep/ast-grep to v0.42.3 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/46
+- Update dependency aqua:EmbarkStudios/cargo-deny to v0.19.7 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/47
+- Update dependency github:naa0yama/graft to v0.5.7 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/48
+- Update dependency github:rust-secure-code/cargo-auditable to v0.7.5 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/49
+- Lock file maintenance by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/55
+- Update mise to v2026.5.18 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/56
+- Update mise to v2026.6.0 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/57
+- Update All action update to v4.1.0 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/58
+- Update All action update to v2.81.5 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/59
+- Update All action update to v2.81.6 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/60
+- Update dependency github:naa0yama/graft to v0.5.8 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/61
+- Update All action update to v2.81.7 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/62
+- Update mise to v2026.6.1 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/63
+- Update dependency github:naa0yama/graft to v0.5.9 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/64
+- Update All action update to v2.81.8 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/65
+- Update All action update to v2.81.9 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/67
+- Update mise to v2026.6.2 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/68
+- Update All action update to v2.81.10 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/70
+- Update mise to v2026.6.3 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/71
+- Update mise to v2026.6.4 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/72
+- Update mise to v2026.6.5 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/73
+- Update mise to v2026.6.6 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/74
+- Update mise to v2026.6.9 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/75
+- Lock file maintenance by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/76
+- Update mise to v2026.6.10 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/77
+- Update All action update by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/78
+- Update dependency aqua:EmbarkStudios/cargo-deny to v0.19.9 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/79
+- Update mise (patch) by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/80
+- Update All action update by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/81
+- Update All action update by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/83
+- Update dependency aqua:cli/cli to v2.96.0 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/69
+- Update dependency usage to v3.5.3 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/27
+- Update docker/dockerfile Docker tag to v1.25.0 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/84
+- Update dependency jdx/mise to v2026.6.14 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/86
+- Update All action update by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/90
+- Update dependency aqua:ast-grep/ast-grep to v0.44.0 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/91
+- Update dependency dprint to v0.55.1 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/92
+- Update dependency mozilla/sccache to v0.16.0 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/94
+- Update dependency openobserve/openobserve to v0.91.1 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/95
+- Update dependency zizmor to v1.26.1 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/96
+- Update dependency jdx/mise to v2026.7.0 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/93
+- Update dependency aqua:ast-grep/ast-grep to v0.44.1 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/97
+- Update taiki-e/install-action action to v2.82.9 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/99
+- Update dependency usage to v3.5.4 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/100
+- Update taiki-e/install-action action to v2.82.10 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/101
+- Update dependency jdx/mise to v2026.7.1 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/102
+- Update dependency jdx/mise to v2026.7.2 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/103
+- Update github/codeql-action action to v4.37.0 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/104
+- Update dependency jdx/mise to v2026.7.3 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/105
+- Update taiki-e/install-action action to v2.82.11 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/106
+- Update actions/labeler action to v6.2.0 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/107
+- Update dependency jdx/mise to v2026.7.5 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/108
+- Update dependency aqua:EmbarkStudios/cargo-deny to v0.20.2 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/110
+- Update taiki-e/install-action action to v2.83.0 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/111
+- Update taiki-e/install-action action to v2.83.1 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/112
+- Update dependency github:naa0yama/graft to v0.5.10 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/113
+- Update dependency github:naa0yama/graft to v0.5.11 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/114
+- Update taiki-e/install-action action to v2.83.2 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/115
+- Update dependency zizmor to v1.27.0 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/116
+- Update dependency usage to v3.5.5 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/117
+- Update dependency dprint to v0.55.2 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/118
+- Update dependency jdx/mise to v2026.7.6 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/119
+- Update dependency jdx/mise to v2026.7.6 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/120
+- Update zizmorcore/zizmor-action action to v0.6.0 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/122
+- Update dependency jdx/mise to v2026.7.7 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/123
+- Update dependency jdx/mise to v2026.7.7 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/124
+- Update All action update by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/126
+- Update jdx/mise-action action to v4.2.1 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/127
+- Update dependency openobserve/openobserve to v0.91.2 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/128
+- Update taiki-e/install-action action to v2.83.4 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/129
+- Update All action update by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/133
+- Update dependency jdx/mise to v2026.7.11 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/134
+- Update dependency jdx/mise to v2026.7.11 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/135
+- Update dependency usage to v3.5.6 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/136
+- Update dependency openobserve/openobserve to v0.91.3 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/137
+- Update github/codeql-action action to v4.37.2 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/138
+- Update dependency zizmor to v1.28.0 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/141
+- Update github/codeql-action action to v4.37.3 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/142
+- Update taiki-e/install-action action to v2.84.1 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/143
+- Update dependency jdx/mise to v2026.7.12 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/144
+- Update dependency jdx/mise to v2026.7.12 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/145
+- Update dependency cargo:cargo-nextest to v0.9.140 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/146
+- Update All action update by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/147
+- Update dependency aqua:ast-grep/ast-grep to v0.45.0 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/148
+- Update zizmorcore/zizmor-action action to v0.6.1 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/149
+- Update All action update by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/150
+- Update dependency jdx/mise to v2026.7.13 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/151
+- Update dependency jdx/mise to v2026.7.13 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/152
+- Update All action update by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/153
+- Update dependency usage to v3.5.7 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/154
+- Update dependency usage to v3.6.0 by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/155
+
+### Other Changes
+
+- chore: backport boilerplate-rust template changes by @naa0yama in https://github.com/naa0yama/fterm-rs/pull/13
+- chore: fix gitignore patterns and mise o2 task env loading by @naa0yama in https://github.com/naa0yama/fterm-rs/pull/36
+- Update Rust crate anyhow to v1.0.103 [SECURITY] by @renovate[bot] in https://github.com/naa0yama/fterm-rs/pull/85
+
+**Full Changelog**: https://github.com/naa0yama/fterm-rs/compare/v0.1.10...v0.1.11
+
 # Changelog
 
 ## [v0.1.10](https://github.com/naa0yama/fterm-rs/commits/v0.1.10) - 2026-05-04
