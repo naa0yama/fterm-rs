@@ -47,7 +47,7 @@ which = "8.0.2"
 nix = { version = "0.31.2", default-features = false, features = ["fs"] }
 
 ## Dev
-serial_test = "3"
+serial_test = "4"
 
 # graft:keep-end
 
